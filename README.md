@@ -1,6 +1,19 @@
 php-resque: PHP Resque Worker (and Enqueue) [![Build Status](https://secure.travis-ci.org/chrisboulton/php-resque.png)](http://travis-ci.org/chrisboulton/php-resque)
 ===========================================
 
+## Fork ##
+
+I forked this project because I was getting a Php error/warning from the
+call to ```cli_set_proces_title()``` in the Worker class.
+
+I dont have time or need to find the "right" fix - so I forked the project and made a hack.
+
+Instead of ```cli_set_process_title()``` I used ```setproctitile()``` which, of course, requires
+the approproriate Php extension._
+
+## Original ##
+
+
 Resque is a Redis-backed library for creating background jobs, placing
 those jobs on one or more queues, and processing them later.
 
